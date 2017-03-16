@@ -2,15 +2,19 @@
 <html ng-app="myFirstApp">
   <head>
     <meta charset="utf-8">
-    <script src="\angular.min.js"></script>
-    <script src="\app.js"></script>
-    <title>Welcome Angular</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>My first AngularJS App</title>
   </head>
   <body>
-    <h1>Welcome Angular </h1>
+    <h1>My first AngularJS App</h1>
   </body>
   <div ng-controller="MyFirstController">
+    <input type="text" ng-model="name">
+    Inside my input is: <b>{{name}}</b>
+    {{sayHello()}}
 
+    <input
   </div>
 
 
