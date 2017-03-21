@@ -1,0 +1,44 @@
+
+<script>
+
+function testSpeed() {
+
+var arr = [];
+arr.length = 10000000;
+//arr.fill(1);
+for (var i_1 = 0; i_1 < arr.length; i_1++) {
+arr[i_1] = 1;
+}
+//////////////////////////////////
+var t = new Date();
+var sum = 0;
+for (var i = 0; i < arr.length; i++) {
+    var a = arr[i];
+    if (a & 1) {
+        sum += a;
+    }
+    else {
+        sum -= a;
+    }
+}
+console.log(new Date().getTime() - t.getTime());
+console.log(sum);
+
+t = new Date();
+sum = 0;
+arr.forEach(function (value, i, aray) {
+    var a = value;
+    if (a & 1) {
+        sum += a;
+    }
+    else {
+        sum -= a;
+    }
+});
+console.log(new Date().getTime() - t.getTime());
+console.log(sum);
+}
+
+</script>
+
+<input type="button" onclick="testSpeed()" value="Click" />
