@@ -1,5 +1,13 @@
 <ul>
-  <li ng-repeat="item in $ctrl.items">
-    {{item.name}}
-  </li>
+    <li ng-repeat="item in $ctrl.items">
+        <span class="itemName"><em>{{item.short_name}}</em> - {{item.name}}</span>
+
+        <ul class="items-list">
+            <li>ID: <span>{{item.id}}</span></li>
+            <li>Price for a small portion: <span>{{item.price_small || 0 }}</span></li>
+            <li>Price for a large portion: <span>{{item.price_large}}</span></li>
+            <li class="heading">Description</li>
+            <li class="description">{{item.description || 'No description found'}}</li>
+        </ul>
+    </li>
 </ul>
